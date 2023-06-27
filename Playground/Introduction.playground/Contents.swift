@@ -1,19 +1,19 @@
 //: # Introduction
-//: ## Combine is a genuine Apple framework for reactive programming in Swift that allows events occurring in one object to be propagated to another object. Events can be classified into three types
+//: ## CombineはSwiftでリアクティブプログラミングを行うための、Apple純正のフレームワークです。Combineを使うと、あるオブジェクトで発生したイベントを別のオブジェクトに伝達することができます。イベントは以下の3種類のタイプに分類することができます。
 /*:
- * ## Value
- * ## Completion
- * ## Failure
+ * ## 値
+ * ## イベントの完了
+ * ## イベントの失敗
  */
-//: ## A "value" is a "value" itself, such as "1" or ""Swift"". It may seem a little strange to call a mere "value" an event, but in Combine, "value" itself is also treated as an event. Event Completion" is an event to inform the destination object that all event transmissions are complete. Failure" is an event to inform the destination object that the transmission of an event has failed for some reason.
-//: ## The following three items are important to learn about Combine.
+//: ## 「値」は「1」や「"Swift"」といった「値」そのものです。単なる「値」をイベントと呼ぶのは少々違和感を感じますが、Combineでは「値」そのものもイベントとして扱います。「イベントの完了」はイベントの伝達が全て完了したことを、伝達先のオブジェクトに伝えるためのイベントです。「イベントの失敗」は何かしらの理由でイベントの伝達が失敗したことを、伝達先のオブジェクトに伝えるためのイベントです。
+//: ## Combineを学ぶ上で重要な項目は以下の3つです。
 /*:
- * ## Publisher
- * ## Subscriber
- * ## Operator
+ * ## Publisher (パブリッシャ)
+ * ## Subscriber (サブスクライバ)
+ * ## Operator (オペレータ)
  */
-//: ## Publishers can publish events. A "Subscriber" can subscribe to events published by the "Publisher". When a Subscriber subscribes to a Publisher, it can receive events published by the Publisher within the closure defined in the Subscriber. The Operator can add processing to the events published by the Publisher, and can subscribe to the processed events.
-//: ## Now, let's see what we have described so far in code.
+//: ## 「Publisher」はイベントをPublish(発行)することができます。「Subscriber」は「Publisher」がPublishしたイベントを、Subscribe(購読)することができます。「Publisher」を「Subscriber」でSubscribeすると、「Publisher」からPublishされたイベントを、「Subscriber」内で定義したクロージャ内で受信することができます。「Operator」は「Publisher」がPublishしたイベントに処理を加えることができ、処理を加えたイベントをSubscribeすることができます。
+//: ## では、ここまで説明してきた内容をコードで確認します。
 //: ---
 import Combine
 
